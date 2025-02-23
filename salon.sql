@@ -28,3 +28,5 @@ INSERT INTO services (name) VALUES
 ('Hair Cut'),
 ('Coloring'),
 ('Styling');
+ 
+-- Check the Shell script
