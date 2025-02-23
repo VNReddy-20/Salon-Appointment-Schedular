@@ -61,14 +61,14 @@ main_menu() {
       CUSTOMER_NAME=$($PSQL "SELECT name FROM customers WHERE phone='$CUSTOMER_PHONE'")
     fi
 
-    # Get appointment time
-    read -p "Enter appointment time: " SERVICE_TIME
+ # Get appointment time
+   read -p "Enter appointment time: " SERVICE_TIME
 
-    # Insert appintment
-    INSERT_APPOINTMNET=$($PSQL "INSERT INTO appointments(Customer_id, service_id, time) VALUES($CUSTOMER_ID, $SERVICE_ID_SELECTED, '$SERVICE_TIME')")
+ # Insert appintment
+   INSERT_APPOINTMNET=$($PSQL "INSERT INTO appointments(Customer_id, service_id, time) VALUES($CUSTOMER_ID, $SERVICE_ID_SELECTED, '$SERVICE_TIME')")
 
-    # Output confirmation
-    echo "I have put you down for a $(echo $SERVICE_NAME | sed -E 's/^ +| +$//g') at $(echo $SERVICE_TIME | sed -E 's/^ +| +$//g'), $(echo $CUSTOMER_NAME | sed -E 's/^ +| +$//g')."
+ # Output confirmation
+  echo "I have put you down for a $(echo $SERVICE_NAME | sed -E 's/^ +| +$//g') at $(echo $SERVICE_TIME | sed -E 's/^ +| +$//g'), $(echo $CUSTOMER_NAME | sed -E 's/^ +| +$//g')."
 
-    # Start program
-    main_menu
+ # Start program
+  main_menu
