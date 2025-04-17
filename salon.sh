@@ -61,6 +61,7 @@ main_menu() {
       CUSTOMER_NAME=$($PSQL "SELECT name FROM customers WHERE phone='$CUSTOMER_PHONE'")
     fi
 
+
  # Get appointment time
    read -p "Enter appointment time: " SERVICE_TIME
 
