@@ -1,9 +1,11 @@
 -- Create the database
 CREATE DATABSE salon;
 
+
 -- Connect to the salon database
 \c salon
 
+  
 -- Create tables
 CREATE TABLE customers (
   customer_id SERIAL PRIAMRY KEY,
@@ -23,10 +25,12 @@ CREATE TABLE appointments (
   time VARCHAR(20) NOT NULL
 );
 
+
 -- Insert initial services
 INSERT INTO services (name) VALUES
 ('Hair Cut'),
 ('Coloring'),
 ('Styling');
- 
+
+
 -- Check the Shell script
